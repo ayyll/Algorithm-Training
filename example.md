@@ -2,7 +2,7 @@
 
 # 题目描述
 
-[题目链接]("www.baidu.com") 
+<a href="题目地址" target="_blank">题目链接</a>
 
 题目描述 xxxxxxxxxxxxxxxxxxxxxx
 

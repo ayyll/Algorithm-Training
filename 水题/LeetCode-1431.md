@@ -2,7 +2,7 @@
 
 # 题目描述
 
-[题目链接]("https://leetcode-cn.com/problems/kids-with-the-greatest-number-of-candies/") 
+<a href="https://leetcode-cn.com/problems/kids-with-the-greatest-number-of-candies/" target="_blank">题目链接</a>
 
 题目描述 :
 
