@@ -56,13 +56,14 @@
 
 # 代码
 
+
 ```java
 class Solution {
     public int numIslands(char[][] grid) {
         int m = grid.length;
         int n = grid[0].length;
         DSU dsu = new DSU(m * n);
-        int[][] dirs = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+        int[][] dirs = { {1, 0}, {-1, 0}, {0, 1}, {0, -1} };
         int count = 0;
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
