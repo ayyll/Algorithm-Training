@@ -56,7 +56,7 @@
 
 # 代码
 
-```
+```java
 class Solution {
     public int numIslands(char[][] grid) {
         int m = grid.length;
