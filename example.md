@@ -19,7 +19,8 @@ xxxxxxxxxxxxxxxxxxxxxx.
 
 # 代码
 
-```
+
+```java
 void print__(void) {
     cout << "hello world!" << endl;
 }
