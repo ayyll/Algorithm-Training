@@ -54,6 +54,11 @@
 
 合并完成以后，再次遍历网格，当遇到'1'时，去进行判断，当前是否为一个集合的根，如果是，就对岛屿数量加一。遍历完成，返回最终的岛屿数量。
 
+---
+
+提供一种"感染"的思路：
+遍历地图，对于'1',感染其相连的'1'(使其置为'0'),感染方式用dfs或者bfs都可以，只要扫一遍周围就可以，最终把"孤岛"的数目统计出来就是总岛屿的数量。
+
 # 代码
 
 
@@ -113,3 +118,53 @@ class DSU {
 }
 ```
 
+
+---
+
+dfs实现感染函数:
+
+
+```java
+
+class Solution {
+
+    static int maxn = 301;
+    static int dir[][] = { {0 , 1}, {0 , -1}, {1 , 0}, {-1 , 0} };
+    static char vis[][] = new char[maxn][maxn];
+    public int numIslands(char[][] grid) {
+        
+        int ans = 0;
+        for(int i = 0; i < grid.length; i++) {
+            for(int j = 0; j < grid[i].length; j++) {
+                if(grid[i][j] == '1') {
+                    ans += 1;
+                    dfs(i , j, grid);
+                }
+            }
+        }
+
+        return ans;
+    }
+
+    void dfs(int x, int y, char[][] grid) {
+
+        if(x < 0 || x >= grid.length || y < 0 || y >= grid[0].length) {
+            return ;
+        }
+        if(grid[x][y] == '0') {
+            return ;
+        }
+        grid[x][y] = '0';
+
+        for(int i = 0; i < 4; i++) {
+            int tx = x + dir[i][0];
+            int ty = y + dir[i][1];
+            if(tx >= 0 && tx < grid.length && ty >= 0 && ty < grid[tx].length && vis[tx][ty] == 0 && grid[tx][ty] == '1') {
+                vis[tx][ty] = 1;
+                dfs(tx , ty, grid);
+                vis[tx][ty] = 0;
+            }
+        }
+    }
+}
+```
