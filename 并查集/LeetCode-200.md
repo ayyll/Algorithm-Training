@@ -89,7 +89,7 @@ class Solution {
     }
 }
 
-public class DSU {
+class DSU {
     int[] parent;
 
     public DSU(int N) {
