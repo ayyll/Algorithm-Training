@@ -53,7 +53,7 @@
 [shell](./shell/README.md)
 
 # 更新解题报告
-新增解题报告(xx.md)时，xx.md放在对应分类目录下，并在对应分类目录下的README.md中添加相应的链接即可。
+新增解题报告(xx.md)时，xx.md放在对应分类目录下， ~~并在对应分类目录下的README.md中添加相应的链接即可。~~ 在根目录下执行update_cat.sh即可。
 
 # 解题报告格式
 参见 [示例](example.md)
