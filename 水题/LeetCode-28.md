@@ -1,4 +1,4 @@
-<div align='center' ><font size='70'>实现 strStr() </font></div>
+<div align='center' ><font size='70'>实现 strStr</font></div>
 
 # 题目描述
 
